@@ -6,10 +6,10 @@ public class StudentsGrades {
 	
 	public static void main(String[] args) {
 	    double score[]=null;
-	    score = new double[5];  	 //Ê¹ÓÃnewÎªÊı×é·ÖÅä´óĞ¡£¬Ö¸¶¨´æ´¢¿Õ¼ä
+	    score = new double[5];  	 //ä½¿ç”¨newä¸ºæ•°ç»„åˆ†é…å¤§å°ï¼ŒæŒ‡å®šå­˜å‚¨ç©ºé—´
 		// TODO Auto-generated method stub
 		int choose = menu();
-		while(choose!=1)
+		while(choose!=1&& choose !=5)
 		{
 			System.out.println("please enter the score first and then execute the function");
 			choose = menu();
@@ -20,25 +20,25 @@ public class StudentsGrades {
 			case 1:getAllGrades(score);
 				break;
 			case 2:average = getAverage(score);
-				System.out.println("Æ½¾ù·Ö="+average);
+				System.out.println("å¹³å‡åˆ†="+average);
 				break;
 			case 3:maxNum = getHighestGrade(score);
-			    System.out.println("×î´óÖµ="+maxNum);
+			    System.out.println("æœ€å¤§å€¼="+maxNum);
 				break;
 			case 4:minNum = getLowestGrade(score);			
-			    System.out.println("×îĞ¡Öµ="+minNum);
+			    System.out.println("æœ€å°å€¼="+minNum);
 				break;
 			default:
-				System.out.println("ÄúÊäÈëÎŞĞ§£¬ÖØĞÂÑ¡Ôñ!");
+				System.out.println("æ‚¨è¾“å…¥æ— æ•ˆï¼Œé‡æ–°é€‰æ‹©!");
 				break;
 			}
 			choose = menu();
 		}
-		System.out.println("³ÌĞòÍË³ö£¬»¶Ó­ÔÙ´ÎÊ¹ÓÃ!");
+		System.out.println("ç¨‹åºé€€å‡ºï¼Œæ¬¢è¿å†æ¬¡ä½¿ç”¨!");
 
 	}
 
-	// ²Ëµ¥µÄÏÔÊ¾£¬·µ»ØÓÃ»§µÄÊäÈëÑ¡Ôñ
+	// èœå•çš„æ˜¾ç¤ºï¼Œè¿”å›ç”¨æˆ·çš„è¾“å…¥é€‰æ‹©
 	public static int menu() {
 		int choice = 0;
 		System.out.println("===========STUDENTS MANAGEMENT===========");
